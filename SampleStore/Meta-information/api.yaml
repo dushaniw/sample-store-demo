@@ -9,7 +9,7 @@ context: /SampleStore/1.0.0
 contextTemplate: /SampleStore/{version}
 tags: []
 documents: []
-lastUpdated: Dec 9, 2019 5:08:39 PM
+lastUpdated: Dec 9, 2019 5:22:46 PM
 availableTiers:
  -
   name: Unlimited

@@ -5,5 +5,13 @@
   summary: The API Docs for Sample Store
   sourceType: FILE
   visibility: API_LEVEL
-  lastUpdated: Dec 9, 2019 5:08:39 PM
+  lastUpdated: Dec 9, 2019 5:22:47 PM
   filePath: SampleStore.pdf
+ -
+  id: 7ce8b6fb-6f7a-472e-90c6-a6bd859edbcb
+  type: HOWTO
+  name: InlineDoc
+  summary: inline summary
+  sourceType: INLINE
+  visibility: API_LEVEL
+  lastUpdated: Dec 9, 2019 5:25:36 PM
