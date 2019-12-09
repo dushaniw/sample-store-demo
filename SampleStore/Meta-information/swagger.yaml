@@ -4,29 +4,33 @@ info:
   description: This is a sample server online store
   version: 1.0.0
 servers:
-- url: http://localhost:9090/samplestore
+ -
+  url: http://localhost:9090/samplestore
 paths:
   /products:
     get:
       description: Get Product List
       parameters:
-      - name: start
+       -
+        name: start
         in: query
         required: false
         schema:
           type: string
-      - name: count
+       -
+        name: count
         in: query
         required: false
         schema:
           type: string
-      - name: params
+       -
+        name: params
         in: query
         required: false
         schema:
           type: string
       responses:
-        "200":
+        200:
           description: |
             OK.
             List of Products is returned.
@@ -44,7 +48,7 @@ paths:
               $ref: '#/components/schemas/Product'
         required: true
       responses:
-        "201":
+        201:
           description: |
             Created.
             Successful response with the newly created object as entity in the body.
@@ -52,7 +56,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Product'
-        "400":
+        400:
           description: |
             Bad Request.
             Invalid request or validation error.
@@ -60,7 +64,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-        "415":
+        415:
           description: |
             Unsupported Media Type.
             The entity of the request was in a not supported format.
@@ -72,14 +76,15 @@ paths:
     get:
       description: Get a Product
       parameters:
-      - name: productId
+       -
+        name: productId
         in: path
         required: true
         schema:
           type: string
           format: string
       responses:
-        "200":
+        200:
           description: |
             OK.
             Product is returned.
@@ -87,7 +92,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Product'
-        "404":
+        404:
           description: |
             Not Found
             Invalid product Id.
@@ -95,7 +100,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-        "500":
+        500:
           description: |
             Internal Server Error
             Error while getting product

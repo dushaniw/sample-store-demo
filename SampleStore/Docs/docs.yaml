@@ -1,8 +1,9 @@
  -
+  id: c5671c14-a4a2-4e96-b6af-471e738326f2
   type: HOWTO
   name: SampleStore-API-Docs
   summary: The API Docs for Sample Store
   sourceType: FILE
   visibility: API_LEVEL
-  lastUpdated: Nov 4, 2019 5:06:43 PM
+  lastUpdated: Dec 9, 2019 3:23:50 PM
   filePath: SampleStore.pdf

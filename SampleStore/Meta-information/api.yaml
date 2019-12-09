@@ -2,15 +2,72 @@ id:
   providerName: admin
   apiName: SampleStore
   version: 1.0.0
+uuid: 93746c54-bd5b-4357-89aa-ed7e84076182
 description: This is a sample server online store
 type: HTTP
 context: /SampleStore/1.0.0
 contextTemplate: /SampleStore/{version}
+tags: []
+documents: []
+lastUpdated: Dec 9, 2019 3:23:50 PM
 availableTiers:
-- name: Unlimited
+ -
+  name: Unlimited
+  displayName: Unlimited
+  description: Allows unlimited requests
+  requestsPerMin: 2147483647
+  requestCount: 2147483647
+  unitTime: 0
+  timeUnit: ms
+  tierPlan: FREE
+  stopOnQuotaReached: true
+availableSubscriptionLevelPolicies: []
+uriTemplates: []
+apiHeaderChanged: false
+apiResourcePatternsChanged: false
 status: PUBLISHED
 visibility: public
+gatewayLabels: []
+endpointSecured: false
+endpointAuthDigest: false
 transports: http,https
-productionUrl: http://localhost:8080
-sandboxUrl: http://localhost:8081
 inSequence: custom_in
+advertiseOnly: false
+corsConfiguration:
+  corsConfigurationEnabled: false
+  accessControlAllowOrigins:
+   - '*'
+  accessControlAllowCredentials: false
+  accessControlAllowHeaders:
+   - authorization
+   - Access-Control-Allow-Origin
+   - Content-Type
+   - SOAPAction
+  accessControlAllowMethods:
+   - GET
+   - PUT
+   - POST
+   - DELETE
+   - PATCH
+   - OPTIONS
+endpointConfig: '{"endpoint_type":"http","production_endpoints":{"config":"null","url":"http://dev.wso2.com:9090/samplestore"},"sandbox_endpoints":{"config":"null","url":"http://dev.sandbox.wso2.com:9090/samplestore"}}'
+cacheTimeout: 0
+implementation: ENDPOINT
+scopes: []
+isDefaultVersion: false
+isPublishedDefaultVersion: false
+environments:
+ - Production and Sandbox
+createdTime: "1575857705000"
+additionalProperties: {}
+monetizationProperties: {}
+isMonetizationEnabled: false
+environmentList:
+ - SANDBOX
+ - PRODUCTION
+apiSecurity: oauth2,oauth_basic_auth_api_key_mandatory
+endpoints: []
+enableSchemaValidation: false
+accessControl: all
+rating: 0.0
+isLatest: true
