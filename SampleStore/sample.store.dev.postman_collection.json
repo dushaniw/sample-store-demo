@@ -470,7 +470,7 @@
 			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "3.SampleStore API",
+			"name": "3.Store REST API Client",
 			"item": [
 				{
 					"name": "3.1.Get Product List",
@@ -986,28 +986,47 @@
 							"body": "{\n \"code\": \"<long>\",\n \"message\": \"<string>\",\n \"description\": \"<string>\"\n}"
 						}
 					]
-				}
-			],
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"id": "d2b6adf4-7431-4bb1-88ef-103330f80d90",
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
 				},
 				{
-					"listen": "test",
-					"script": {
-						"id": "d2316541-3bfb-411d-a79c-f7d5d324575f",
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
+					"name": "3.4.Delete Application",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "accessToken",
+									"value": "{{store_rest_accesstoken}}",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://dev.apim.wso2.com/api/am/store/v0.15/applications/{{sample_application_id}}",
+							"protocol": "https",
+							"host": [
+								"dev",
+								"apim",
+								"wso2",
+								"com"
+							],
+							"path": [
+								"api",
+								"am",
+								"store",
+								"v0.15",
+								"applications",
+								"{{sample_application_id}}"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
