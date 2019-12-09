@@ -1,0 +1,5 @@
+<sequence xmlns="http://ws.apache.org/ns/synapse" name="custom_in">  
+    <log level="custom">
+       <property name="CustomLog" value="Inside Inflow-------------"/>
+    </log>
+</sequence>
