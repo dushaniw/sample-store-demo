@@ -9,7 +9,7 @@ context: /SampleStore/1.0.0
 contextTemplate: /SampleStore/{version}
 tags: []
 documents: []
-lastUpdated: Dec 10, 2019 4:27:08 PM
+lastUpdated: Dec 10, 2019 5:54:49 PM
 availableTiers:
  -
   name: Unlimited
@@ -26,6 +26,10 @@ uriTemplates: []
 apiHeaderChanged: false
 apiResourcePatternsChanged: false
 status: PUBLISHED
+technicalOwner: Jake
+technicalOwnerEmail: jake@store.com
+businessOwner: 'Tom '
+businessOwnerEmail: tom@store.com
 visibility: public
 gatewayLabels: []
 endpointSecured: false
@@ -33,6 +37,7 @@ endpointAuthDigest: false
 transports: http,https
 inSequence: custom_in
 advertiseOnly: false
+subscriptionAvailability: all_tenants
 corsConfiguration:
   corsConfigurationEnabled: false
   accessControlAllowOrigins:
@@ -50,7 +55,8 @@ corsConfiguration:
    - DELETE
    - PATCH
    - OPTIONS
-endpointConfig: '{"endpoint_type":"http","production_endpoints":{"config":"null","url":"http://dev.wso2.com:9090/samplestore"},"sandbox_endpoints":{"config":"null","url":"http://dev.sandbox.wso2.com:9090/samplestore"}}'
+endpointConfig: '{"endpoint_type":"http","sandbox_endpoints":{"config":"null","url":"http://dev.sandbox.wso2.com:9090/samplestore"},"production_endpoints":{"config":"null","url":"http://dev.wso2.com:9090/samplestore"}}'
+responseCache: Disabled
 cacheTimeout: 0
 implementation: ENDPOINT
 scopes: []

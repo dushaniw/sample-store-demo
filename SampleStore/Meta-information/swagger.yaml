@@ -6,6 +6,9 @@ info:
 servers:
  -
   url: http://localhost:9090/samplestore
+security:
+ -
+  default: []
 paths:
   /products:
     get:
@@ -15,18 +18,24 @@ paths:
         name: start
         in: query
         required: false
+        style: form
+        explode: true
         schema:
           type: string
        -
         name: count
         in: query
         required: false
+        style: form
+        explode: true
         schema:
           type: string
        -
         name: params
         in: query
         required: false
+        style: form
+        explode: true
         schema:
           type: string
       responses:
@@ -38,6 +47,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ProductList'
+      security:
+       -
+        default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
     post:
       description: Add a Product
       requestBody:
@@ -72,6 +86,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+      security:
+       -
+        default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
   /products/{productId}:
     get:
       description: Get a Product
@@ -80,6 +99,8 @@ paths:
         name: productId
         in: path
         required: true
+        style: simple
+        explode: false
         schema:
           type: string
           format: string
@@ -108,6 +129,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
+      security:
+       -
+        default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
 components:
   schemas:
     Product:
@@ -153,3 +179,10 @@ components:
           type: string
           description: |
             A detail description about the error message.
+  securitySchemes:
+    default:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: https://test.com
+          scopes: {}
